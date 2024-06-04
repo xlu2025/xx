@@ -82,7 +82,7 @@ int main() {
 			int min_team = -1;
 
 			for (int j = 0; j < num_teams; ++j) {
-				if (teams[j].size() < team_size) {  // Ensure team can accommodate more students
+				if ((int)teams[j].size() < team_size) {  // Ensure team can accommodate more students
 					bool can_add = true;
 					for (const auto& team_member : teams[j]) {
 						if (students.at(team_member).not_want_to_work_with.find(username) != string::npos) {
